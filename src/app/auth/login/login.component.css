@@ -1,0 +1,63 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner{
+  margin:auto;
+  color:violet;
+}
+button{
+    display: block;
+    margin:auto;
+    width: 50%;
+}
+a {
+    display: block;
+    margin:auto;
+    color:black;
+}
+form{
+    padding:0px;
+    width: 100%;
+    margin:auto;
+}
+a.forgotpassword{
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color:black;
+  word-break: break-all;
+
+}
+.mat-card{
+  background-color: rgba(31, 30, 30, 0.1);
+  border: 0px;
+  box-shadow: none;
+
+}
+
+h1,h2{
+  color:black;
+  padding-top: 2rem;
+}
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: blueviolet !important;
+ }
+
+ ::ng-deep .mat-form-field-placeholder{
+
+  color:blueviolet;
+}
+input{
+  color:black;
+}
+::ng-deep .mat-focused .mat-form-field-placeholder{
+
+  color:blueviolet;
+}
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: blueviolet !important;;
+}

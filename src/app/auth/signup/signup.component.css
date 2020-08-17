@@ -1,0 +1,54 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner{
+  margin:auto;
+  color:violet;
+}
+button{
+    display: block;
+    margin:auto;
+    width: 50%;
+}
+a {
+    display: block;
+    margin:auto;
+    color:black;
+}
+form{
+  
+    width: 80%;
+    margin:auto;
+    
+}
+
+h1,h2{
+  color:black;
+  padding-top: 2rem;
+}
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: black !important;
+ }
+
+ ::ng-deep .mat-form-field-placeholder{
+
+  color:blueviolet;
+}
+input{
+  color:black;
+}
+::ng-deep .mat-focused .mat-form-field-placeholder{
+
+  color:black;
+}
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: blueviolet !important;;
+}
+
+input{
+  color:black;
+}

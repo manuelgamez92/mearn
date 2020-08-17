@@ -1,0 +1,7 @@
+{
+    "env":{
+        "MONGO_ATLAS_PW": "sammy*2020",
+        "JWT_KEY": "secret_this_should_be_longer",
+        "CLIENT_URL": "http://localhost:4200/changePassword/"
+    }
+}

@@ -1,0 +1,40 @@
+<h1 class="lead" align="center" style="margin-top: -1.5rem;">PROFILE</h1>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<form [formGroup]="form" *ngIf="!isLoading">
+    <mat-form-field>
+        <input matInput [value]="user.email" placeholder="Email" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="text" [value]="user.username" placeholder="Nickname/Username" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Country" [(ngModel)]="country" [value]="user.country" formControlName="country">
+            {{user.country}}
+            <mat-option value="user.country" selected>{{user.country}}</mat-option>
+            <mat-option *ngFor="let c of countries" [value]="c.name">{{c.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="f.country.errors">Please select your country</mat-error>
+
+    </mat-form-field>
+
+    <div class="row">
+        <div class="container">
+            <button mat-button type="button" (click)="filePicker.click()"
+                style="color:black;border:1px solid;padding:.5rem;">Change profile image</button></div>
+        <input type="file" #filePicker (change)="onImagePicked($event)">
+        <div class="image-preview" *ngIf="imagePreview!==null">
+            <img [src]="imagePreview">
+        </div>
+        <div class="image-preview" *ngIf="imagePreview===null">
+            <img src="../../../assets/img/user.png">
+        </div>
+
+    </div>
+
+
+    <button mat-raised-button color="accent" (click)="onSave(form)" *ngIf="!isLoading">Update profile</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <br>
+</form>

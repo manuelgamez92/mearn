@@ -1,0 +1,63 @@
+<h1 align="center">Sign Up</h1>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form  [formGroup]="form" *ngIf="!isLoading">
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          placeholder="Email Address"          
+          email
+         >
+        <mat-error *ngIf="f.email.errors">Please enter a valid email</mat-error>
+      </mat-form-field>
+     
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="user"
+          type="text"
+          placeholder="Nickname or username"
+                   
+         >
+        <mat-error *ngIf="f.user.errors">Please enter a valid username</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select formControlName="country">
+          <mat-option value="" disabled selected hidden>Select your country</mat-option>
+          <mat-option *ngFor="let c of countries" [value]="c.name">{{c.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="f.country.errors">Please select your country</mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          placeholder="Password"          
+         >
+        <mat-error *ngIf="f.password.errors">Please enter a valid passsword</mat-error>
+      </mat-form-field>
+     <mat-form-field>
+        <input
+          matInput
+          type="password"
+          formControlName="passwordRep"
+          placeholder="Repeat password"          
+         >
+        <mat-error *ngIf="f.passwordRep.errors">Passwords dont match </mat-error>
+      </mat-form-field>
+      
+  
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="onSignUp(form)" *ngIf="!isLoading">Sign Up</button>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <br>
+        <a  mat-button routerLink="/login" >Already with Account? Log in here</a>
+    </form>
+  

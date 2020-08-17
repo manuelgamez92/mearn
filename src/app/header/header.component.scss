@@ -1,0 +1,238 @@
+ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+
+.navbar-left-items{
+  padding-top:1rem;
+}
+
+mat-sidenav-content{
+
+    /* these will reset other properties, like background-position, but it does know what you mean */
+    background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)), url("./../../assets/img/bg2.jpeg") no-repeat fixed;
+
+    background-size: cover;
+    padding: 0
+
+    
+    }
+
+   .bg{
+   /* background-image: -o-radial-gradient(circle, #fff, #b1b5be 150px);
+    background-image: -moz-radial-gradient(circle, #fff, #b1b5be 150px);
+    background-image: -webkit-radial-gradient(circle, #fff, #b1b5be 150px);
+    background-repeat: no-repeat;*/
+    background-color: white;
+   } 
+   
+    i{
+        color:white;
+    }
+mat-sidenav{
+padding-right: 1rem;
+padding-left: 1rem;
+background-color: black;
+}
+ p.welcome{
+   color:white;
+   padding-top: 1rem;
+ }
+ .mat-tab-group {
+  justify-content: center;
+}
+::ng-deep mat-tab-group {
+  text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.mat-nav-list .mat-list-item {
+
+    font-size: 12px;
+    color:white;
+}
+a:hover{
+   color:yellow;
+}
+p.welcome{
+    color:white;
+}
+
+.p-2 img{
+  padding-left: 0px;
+}
+ul{
+    display: flex;
+}
+.header{
+    background: black;
+    padding: 3rem;
+    
+}
+
+
+.container {
+    margin: auto;
+    padding: 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .swords{
+      margin-left: 12px;
+  }
+
+  @media screen and (max-width: 849px) {
+
+    input{
+      width: 100%;
+    }
+
+    .p-2#menu-items{
+      display: none;
+    }
+    
+    button.navbar-toggler{
+      display: block;
+    }
+    p.note {
+    color:white;font-size:10px;font-family: italic;padding-right:.1rem
+    }
+    .pos-f-t{
+        display: block;
+    }
+    p.text {
+        color:white;font-size:8px;font-family: italic;padding-right:.1rem
+        }
+       
+        .logo, a.logo{
+            font-size: 12px;
+            letter-spacing: .5;
+            display: none;
+        }
+        mat-toolbar {
+         display: none;
+        }
+        
+  }
+  @media screen and (min-width: 850px) {
+
+    .p-2#menu-items{
+      display: block;
+    }
+    .pos-f-t{
+        display: block;
+    }
+    mat-toolbar{
+        display: none;
+    }
+    button.navbar-toggler{
+      display: none;
+    }
+    input{
+      width: 100%;
+    }
+    p.note {
+    color:white;font-size:12px;font-family: italic;padding-right:.5rem;
+    margin-top:1rem;
+    }
+    p.text {
+        color:white;font-size:10px     
+       }
+
+    
+    a.logo{
+        font-size: 28px;
+        letter-spacing: .5;
+        padding-left: 1rem;
+        padding-right: .5rem;
+    }
+  }
+
+
+  .navbar{
+     margin:auto;
+     font-size: 12px;
+  }
+ 
+
+ nav{
+  padding-bottom: 0px;
+ }
+ 
+ ul{
+   background-color: black;
+ }
+
+ .spacer{
+  flex: 1 .5 auto;  
+}
+
+.spacer2{
+  flex: 1 1 auto;  
+}
+
+.navbar{
+  padding:0px;
+}
+.particle {
+	position: absolute;
+ 	border-radius: 50%;
+}
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+  }
+}
+
+.p-2, input{
+  padding-top:0px;
+  padding-bottom: 0px;
+
+}
+
+.mat-list-item i{
+padding-right:.5rem;
+}

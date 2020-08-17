@@ -1,0 +1,239 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+h1{
+  color:black;
+}
+p.mustLogin{
+  color:black;
+}
+.info-text {
+  text-align: center;
+}
+mat-spinner{
+  margin:auto;
+}
+.post-image img{
+  
+  width: 100%;
+  height: 150px;
+  margin: auto;
+  transition: all 0.3s ease-in-out 0s;
+
+}
+
+img.swords{
+  width: 9%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease-in-out 0s;
+ /* -webkit-transform: translateY(-50%) translateX(-50%);*/
+}
+img.swords:hover {
+  cursor: default;
+  transform: rotate(3600deg);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+mat-paginator{
+  margin-top: 1rem;
+  background-color: rgba(31, 30, 30, 0.466);
+  color:white;
+
+}
+mat-paginator-container {
+  background-color: rgba(255, 255, 255, 0.9)
+}
+mat-expansion-panel {
+  background-color: rgba(31, 30, 30, 0.466);
+
+  text-overflow: ellipsis;
+}
+
+.container {
+  display: flex;
+}
+
+
+.fill {
+  flex: 1;
+}
+.lead{
+  font-size: 20px;
+  color:black;
+}
+mat-card-title{
+  width: 100%;
+  height: 20px;
+  padding-bottom:15px;
+  display: flex;
+  justify-content: space-between;
+}
+.jumbotron{
+  background: #ecf3f3;
+}
+html,body{
+
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)), url("../../../assets/img/bg2.jpeg") no-repeat fixed;
+  
+  background-size: cover;
+
+  
+}
+.mat-select-value {
+color:white!important;
+}
+
+h1.title{
+  padding-top:5.3rem;
+  padding-bottom:1rem;
+}
+.mat-select-value{
+  color:white;
+}
+.spacer{
+  flex: 1 1 auto;  
+}
+#welcome p{
+  color:white;
+}
+p.date{
+  padding-right:1rem;
+  font-size: 12px;
+  color:black;
+  font-family: "Acme";
+  text-align: right;
+
+}
+.mat-expansion-indicator, .mat-expansion-panel-header-description {
+  color: black!important;
+}
+.mat-card-header-text {
+  margin: 0px 1px !important; 
+}
+
+p.title{
+letter-spacing: 1px;
+color:black;
+font-family: "Acme";
+padding-left: 1.2rem;
+padding-right: 1.2rem;
+padding-top: 1rem;
+}
+p.author{
+  padding-left:.5rem;
+  padding-top:.5rem;
+  font-size: 14px;
+  color:blueviolet;
+  font-family: "Acme";
+
+  
+}
+#mat-header{
+  padding-bottom: 1rem;
+}
+.welcome{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:white;
+  font-family: "Acme";
+}
+p.content{
+
+color:white;
+font-family: "Acme";
+
+}
+.fa-heart{
+  color:white!important;
+}
+
+
+p.fechaLabel{
+  padding-right:.5rem;
+  font-size: 10px;
+  color:yellow;
+  font-family: "Acme";
+
+}
+p{
+  color:white;
+  font-size: 12px;
+  word-break: break-all;
+}
+.mat-card-actions{
+  margin:auto;
+}
+.container{
+  padding-top:10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  padding-left:2rem;
+}
+#mat-header{
+  padding-left:1rem;
+}
+@media screen and (max-width: 849px) {
+  .mat-card{
+      
+    text-overflow: ellipsis;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  
+  #principal-row{
+    width: 100%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 850px) {
+  .mat-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  #principal-row{
+    margin: auto;
+  }
+}
+
+.mat-card-header-text {
+  display: none!important;
+}
+#mat-header{
+  padding:20px;
+}
+
+mat-card{
+padding: 0px;}
+
+.particle {
+	position: absolute;
+ 	border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+	@keyframes particle-animation-#{$i} {
+		100% {
+			transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		}
+	}
+	
+	.particle:nth-child(#{$i}){
+		animation: particle-animation-#{$i} 60s infinite;
+		$size: random(5) + 5 + px;
+		opacity: random(100)/100;
+		height: $size;
+		width: $size;
+		animation-delay: -$i * .2s;
+		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+		background: hsl(random(360), 70%, 50%);
+	}
+}

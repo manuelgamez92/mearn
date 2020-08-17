@@ -1,0 +1,84 @@
+
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div class="row justify-content-center" id="principal-row" *ngIf="posts.length <= 0 && !isLoading" style="margin-top: -1rem;">
+  <p class="lead" align="center">You dont have any experience added yet.</p>
+
+</div>
+
+<div class="row justify-content-center" id="principal-row" *ngIf="posts.length > 0 && !isLoading" style="margin-top: -1rem;">
+ 
+  
+  <p class="lead" align="center">YOUR EXPERIENCES</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4" *ngFor="let post of posts" style="padding-bottom: 1rem;">
+
+        <mat-card class="example-card">
+          <div class="row" id="mat-header">
+              <div *ngIf="post.authorImage" >
+              <img [src]="post.authorImage" width="40px" height="40px" style="border-radius: 100px;">
+            </div>
+            <div *ngIf="post.authorImage==null" >
+              <img src="../../assets/img/user.png" width="40px" height="40px" style="border-radius: 100px;">
+            </div>
+              <p class="author"> {{ post.author }}</p>
+              <span class="spacer"></span>
+              <p class="date"> {{ post.date }} </p>
+
+              <p class="author"> {{ post.author }}</p>
+            <span class="spacer"></span>
+            <p class="date"> {{ post.date }} </p>
+          </div>
+
+
+
+
+
+          <div class="post-image">
+            <img mat-card-img [src]="post.imagePath" [alt]="post.title">
+            <!--  <img mat-card-img src="http://192.168.0.12:3000/images/example-1596007078348.jpg" [alt]="post.title">-->
+
+          </div>
+          <mat-card-content>
+            <div class="container">
+              <div class="row">
+                <p class="title">
+                  {{ ((post.title.length>30)? (post.title | slice:0:42)+'..':(post.title)) | uppercase }}
+                </p>
+              </div>
+
+            </div>
+          </mat-card-content>
+
+          <div class="container">
+            <div class="row justify-content-center">
+              <div *ngIf="authActive && userId === post.creator" style="margin-left:auto; margin-right:0">
+                <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+                <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+
+              </div>
+
+              <div *ngIf="userId !== post.creator" style="margin-left:auto; margin-right:0">
+                <a mat-button color="primary" [routerLink]="['/edit', post.id]">Read more</a><span
+                  class="spacer"></span>
+                <button mat-button color="warn" (click)="alert('holis')"><i class="fas fa-heart"></i></button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </mat-card>
+
+
+
+      </div>
+  
+</div>
+<mat-paginator [length]="totalPosts" [pageSize]="perPage" [pageSizeOptions]="pageSizeOptions"
+  (page)="onChangedPage($event)" *ngIf="posts.length > 0 "></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0  && !isLoading"> </p>
+
+</div>

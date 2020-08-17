@@ -1,0 +1,12 @@
+main {
+  width: 80%;
+  margin: 1rem auto;
+}
+body{
+
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)), url("./../assets/img/bg2.jpeg") no-repeat fixed;
+    background-size: cover;
+  
+  }

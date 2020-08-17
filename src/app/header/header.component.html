@@ -1,0 +1,150 @@
+<div class="example-container">
+
+   <nav class="navbar navbar-dark bg-dark">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+         aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="p-2 bd-highlight logo"> <a routerLink="/" class="logo">
+            Experiences</a>
+      </div>
+    
+      <span class="spacer"></span>
+
+      <div class="p-2 bd-highlight">
+
+           <div class="input-group">
+               <input type="text" #searchInput class="form-control" id="inlineFormInputName"
+               placeholder="Search by title">
+                 <div class="input-group-append">
+                  <button type="submit" (click)="search(searchInput.value)" onkeyup="this.value = this.value.toUpperCase();"
+            class="btn btn-primary"><i class="fas fa-search"></i></button>
+               </div>
+             </div>
+            </div>
+  
+      <span class="spacer2"></span>
+      <div class="p-2 bd-highlight" *ngIf="userIsAuth">
+         <p class="welcome"> Welcome, {{username}} </p>
+
+      </div>
+      <div class="p-2 bd-highlight navbar-left-items" *ngIf="userIsAuth" id="menu-items">
+         <a mat-list-item routerLink="/create" routerLinkActive="mat-accent"> <i class="fas fa-edit"></i>Add</a>
+
+
+      </div>
+
+      <div class="p-2 bd-highlight navbar-left-items" *ngIf="!userIsAuth" id="menu-items">
+         <a mat-list-item routerLink="/signup" routerLinkActive="mat-accent"> <i class="fas fa-user-plus"></i>Sign
+            up</a>
+
+
+      </div>
+
+      <div class="p-2 bd-highlight navbar-left-items" *ngIf="!userIsAuth" id="menu-items">
+         <a mat-list-item routerLink="/login" class="lead" routerLinkActive="mat-accent"> <i
+               class="fas fa-user"></i>Login</a>
+
+
+      </div>
+
+      <div class="p-2 bd-highlight" *ngIf="userIsAuth" id="menu-items">
+
+         <a mat-list-item (click)="onLogOut()"> <i class="  fas fa-sign-out-alt"></i>Log out</a>
+
+
+      </div>
+
+
+
+   </nav>
+
+   <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+         <mat-nav-list>
+            <a mat-list-item routerLink="/"><i class="fas fa-home"></i>Home</a>
+
+            <a mat-list-item routerLink="/create" *ngIf="userIsAuth" routerLinkActive="mat-accent"> <i
+                  class="fas fa-edit"></i>Add Experience</a>
+
+            <a mat-list-item routerLink="/signup" *ngIf="!userIsAuth" routerLinkActive="mat-accent"> <i
+                  class="fas fa-user-plus"></i>Sign Up</a>
+
+            <a mat-list-item routerLink="/login" *ngIf="!userIsAuth" routerLinkActive="mat-accent"> <i
+                  class="fas fa-user"></i>Login</a>
+
+            <a mat-list-item (click)="onLogOut()" *ngIf="userIsAuth"> <i class="  fas fa-sign-out-alt"></i>Log
+               out</a>
+
+
+         </mat-nav-list>
+      </div>
+   </div>
+
+
+   <div class="bg" style="margin:auto;padding: 0 0">
+      <mat-tab-group (selectedTabChange)="changeRoute($event)" [selectedIndex]="0" mat-stretch-tabs>
+         <mat-tab label="All experiences"> </mat-tab>
+         <mat-tab label="Yours"> </mat-tab>
+         <mat-tab label="Profile"> </mat-tab>
+      </mat-tab-group>
+
+      <div class="jumbotron">
+
+         <p class="lead" align="center" *ngIf="!userIsAuth"> You need to log in order to add experiences </p>
+
+
+         <p class="lead" align="center">Web activite for upload experiences (MEARN= CRUD,AUTH,JWS,PSW MAIL RESET).</p>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+         <div class="particle"></div>
+      </div>
+
+      <div class="container">
+
+         <div class="row">
+
+            <div class="col-md-3">
+               <app-users></app-users>
+
+            </div>
+
+            <div class="col-md-9">
+               <router-outlet></router-outlet>
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+
+</div>

@@ -1,0 +1,17 @@
+<p class="lead" align="center">USERS</p>
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="container">
+   <ul class="list-group" *ngFor="let user of users">
+      <li class="list-group-item" *ngIf="user.username">
+         <div mat-card-avatar class="example-header-image" *ngIf="user.imagePath">
+            <img [src]="user.imagePath" width="40px" height="40px" style="border-radius: 100px;">
+         </div>
+         <div mat-card-avatar class="example-header-image" *ngIf="user.imagePath==null">
+            <img src="../../assets/img/user.png" width="40px" height="40px" style="border-radius: 100px;">
+         </div>
+         <p class="username"> {{user.username}}</p>
+         <div class="space">{{user.country}}</div>
+      </li>
+   </ul>
+</div>
