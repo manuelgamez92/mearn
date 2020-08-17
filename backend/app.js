@@ -10,7 +10,7 @@ const app = express();
 
 mongoose.connect("mongodb+srv://manuel:"+process.env.MONGO_ATLAS_PW+"@cluster0.gtfcz.mongodb.net/<dbname>")
 .then(()=>{
-  console.log('Conected to databse');
+  console.log('Conected to database');
 })
 .catch(error=>{
     console.log('Conected failed');
