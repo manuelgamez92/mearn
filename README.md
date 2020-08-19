@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 # MeanCourse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+MEARN Web project (CRUD,LOGIN,RST-PASSWORD-JWT-USER ROLE)
 
-## Development server
+## Run server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular set up:
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+Backend server set up (/backend):
+Run `npm run star:server` for running the nodejs+express server at `http://localhost:3000/`.
+
 
 ## Code scaffolding
 
