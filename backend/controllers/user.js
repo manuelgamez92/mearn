@@ -172,7 +172,7 @@ exports.forgotPassword = (req, res, next) => {
 
         const data = {
             from: "postmaster@sandbox586029eda203452d8eb0b27f2ec970dc.mailgun.org",
-            to: "manuelgamez92@gmail.com",
+            to: email,
             subject: "Hello",
             html: `<h2>The Three Musketeer´s Experiences Reset Password Request</h2>
         <h3>Please pinwin click on given link to activate you account<h3>
