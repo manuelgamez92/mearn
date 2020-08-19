@@ -10,8 +10,7 @@ Angular set up:
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 Backend server set up (/backend):
-Run `npm run star:server` for running the nodejs+express server
-
+Run `npm run star:server` for running the nodejs+express server at `http://localhost:3000/`.
 
 
 ## Code scaffolding
