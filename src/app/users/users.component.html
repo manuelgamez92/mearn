@@ -1,7 +1,7 @@
 <p class="lead" align="center">USERS</p>
 
 <mat-spinner *ngIf="isLoading"></mat-spinner>
-<div class="container" *ngIf="this.users.length>0; else no-users">
+<div class="container" *ngIf="this.users.length>0; else nousers">
    <ul class="list-group" *ngFor="let user of users">
       <li class="list-group-item" *ngIf="user.username">
          <div mat-card-avatar class="example-header-image" *ngIf="user.imagePath">
@@ -15,7 +15,7 @@
       </li>
    </ul>
 </div>
-<ng-template #no-users>
+<ng-template #nousers>
    <div class="container" >
       <p align="center">No registered users yet</p>
    

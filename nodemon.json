@@ -1,6 +1,6 @@
 {
     "env":{
-        "MONGO_ATLAS_PW": "<YOUR-PASSWORD>",
+        "MONGO_ATLAS_PW": "Q142e3vVgdAUlZxl",
         "JWT_KEY": "secret_this_should_be_longer",
         "CLIENT_URL": "http://localhost:4200/changePassword/"
     }
